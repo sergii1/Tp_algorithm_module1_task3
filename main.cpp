@@ -17,7 +17,8 @@ public:
     ~Deque() {
         delete[] buffer;
     }
-
+    Deque( const Deque& ) = delete;
+    void operator=( const Deque& ) = delete;
     // PushBack записывает в элемент следующий за последним
     void PushBack(const T &element) {
         if (getNext(tail) == head)
